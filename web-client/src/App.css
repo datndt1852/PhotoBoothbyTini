@@ -1,0 +1,79 @@
+body {
+  margin: 0; /* BẮT BUỘC: Xóa lề mặc định của trình duyệt */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #222;
+  color: white;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh; /* Chiếm 100% chiều cao màn hình */
+  box-sizing: border-box;
+  padding: 0; /* BẮT BUỘC: Xóa mọi padding còn sót lại */
+}
+
+.camera-view {
+  width: 70%;
+  height: 70vh; /* Chiếm toàn bộ chiều cao màn hình */
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-feed,
+.captured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Lấp đầy container và giữ tỷ lệ */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.controls {
+  margin-top: 0; /* Xóa margin */
+  display: flex;
+  gap: 15px;
+  
+  /* Căn giữa các nút */
+  justify-content: center;
+  align-items: center;
+  
+  background-color: #1c1c1e; /* Thêm nền để tách biệt */
+  padding: 20px 0; /* Thêm padding để dễ nhìn hơn */
+}
+
+button, .btn-download {
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #007aff;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+button:hover, .btn-download:hover {
+  background-color: #005ecb;
+}
+
+.btn-capture {
+  background-color: #e53935; /* Màu đỏ nổi bật */
+}
+.btn-capture:hover {
+  background-color: #c62828;
+}
+
+.error-message {
+  background-color: #ff3b30;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
